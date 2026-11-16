@@ -9,6 +9,12 @@
 - **We** built in compliance rules: no financial advice and no invented rates
 - **We** ran a user test with 32 people and analysed their feedback with text analytics
 
+**Methods**
+- **Conversation design:** decision-tree flows (scripted) vs an agent with a knowledge base and guardrails (GenAI, temperature 0.2)
+- **Reliability:** calculations moved into **JavaScript functions** because language models make arithmetic errors; date and booking checks added after testing found errors
+- **Experiment design:** within-subjects test (32 participants, 8 tasks, blind A/B labels), compared with **paired t-tests**
+- **NLP:** spaCy lemmatisation, NLTK stopwords, word frequency, **TF-IDF** and **VADER** sentiment on open-ended feedback
+
 **Result:** The GenAI version completed **86%** of tasks vs **67%** for the scripted one. Users valued both for different reasons, so we recommended a hybrid design.
 
 **Tools:** Voiceflow · JavaScript · Python (text analytics)
